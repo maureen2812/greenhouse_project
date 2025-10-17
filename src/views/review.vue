@@ -1,33 +1,28 @@
 <template>
-  <div
-    class="min-h-screen bg-[#FFFCA9] flex flex-col items-center p-4 sm:p-6 md:p-10 rounded-2xl"
-  >
+  <div class="min-h-screen bg-[#FFFCA9] flex flex-col items-center p-4 sm:p-6 md:p-10">
     <!-- Header -->
     <div class="flex w-full max-w-3xl justify-between items-center mb-6">
-      <button
+      <RouterLink
+        to="viewform"
         class="text-black text-xl hover:text-gray-700 transition"
         title="Back"
       >
         <i class="fa-solid fa-arrow-left"></i>
-      </button>
+      </RouterLink>
       <h1 class="text-3xl sm:text-4xl font-bold text-black">Form</h1>
       <div class="w-6"></div>
     </div>
 
     <!-- Date Picker -->
     <div class="w-full max-w-3xl mb-6">
-      <div
-        class="flex items-center gap-3 bg-white border border-black rounded-lg px-3 py-2 w-fit"
-      >
+      <div class="flex items-center gap-3 bg-white border border-black rounded-lg px-3 py-2 w-fit">
         <i class="fa-solid fa-calendar text-lg"></i>
         <span class="font-medium">17/10/2025</span>
       </div>
     </div>
 
     <!-- Lokasi & Batch -->
-    <div
-      class="w-full max-w-3xl flex flex-col sm:flex-row gap-4 mb-6"
-    >
+    <div class="w-full max-w-3xl flex flex-col sm:flex-row gap-4 mb-6">
       <select
         class="w-full sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#CFE9A8] transition"
       >
@@ -35,7 +30,7 @@
       </select>
 
       <select
-        class="w-full sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#CFE9A8] transition"
+        class="w-44 sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#CFE9A8] transition"
       >
         <option selected>Batch</option>
       </select>
@@ -54,7 +49,7 @@
       <input
         type="text"
         placeholder="CoA"
-        class="w-full px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
+        class="w-52 px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
       />
 
       <!-- Material & Qty -->
@@ -87,9 +82,7 @@
     </div>
 
     <!-- Action Buttons -->
-    <div
-      class="w-full max-w-3xl flex flex-col sm:flex-row gap-4 justify-between mt-8"
-    >
+    <div class="w-full max-w-3xl flex flex-col sm:flex-row gap-4 justify-between mt-8">
       <button
         class="w-full sm:w-1/2 bg-[#69A851] hover:bg-[#5B9546] text-white font-semibold py-3 rounded-lg border border-[#4D734D] transition-all shadow-sm"
       >
@@ -110,5 +103,5 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style scoped>
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 </style>
