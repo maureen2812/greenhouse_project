@@ -4,13 +4,13 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <template>
   <div
-    class=" h-[720px] bg-[#FFFCA9] mx-auto flex flex-col items-center"
+    class="min-h-screen bg-[#FFFCA9] mx-auto flex flex-col items-center px-7"
   >
     <!-- Header -->
-    <div class=" w-[1300px] flex justify-end">
+    <div class=" w-full flex justify-end">
       <router-link to="/login"
         title="Logout"
-        class="text-black text-[26px] hover:text-gray-700"
+        class="text-black text-[26px] mt-3 hover:text-gray-700"
       >
         <i class="fa-solid fa-right-from-bracket"></i>
       </router-link>
@@ -18,7 +18,7 @@ import { RouterLink, RouterView } from 'vue-router'
     <h1 class="text-[40px] font-bold text-black text-center">Report</h1>
 
     <!-- Date -->
-    <div class="w-[1100px] flex justify-start mb-[25px]">
+    <div class="w-full flex justify-start mb-[25px] mt-4">
       <div
         class="flex items-center gap-[10px] bg-white border-2 border-black rounded-[10px] px-[14px] py-[6px]"
       >
@@ -28,7 +28,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <!-- Waiting Card -->
     <div
-      class="w-[1100px] h-[100px] bg-white border-3 border-black rounded-[15px] px-[20px] py-[14px] mb-[20px] flex justify-between items-center"
+      class="w-full h-[100px] bg-white border-3 border-black rounded-[15px] px-[20px] py-[14px] mb-[20px] flex justify-between items-center"
     >
       <div class="text-left text-black text-[16px] leading-tight">
         <p>tgl report</p>
@@ -40,7 +40,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <!-- Approved Card -->
     <div
-      class="w-[1100px] h-[100px] bg-[#69A851] border-3 border-[#4C763B] text-white rounded-[15px] px-[20px] py-[14px] mb-[20px] flex justify-between items-center"
+      class="w-full h-[100px] bg-[#69A851] border-3 border-[#4C763B] text-white rounded-[15px] px-[20px] py-[14px] mb-[20px] flex justify-between items-center"
     >
       <div class="text-left text-[16px] leading-tight">
         <p>tgl report</p>
@@ -52,7 +52,7 @@ import { RouterLink, RouterView } from 'vue-router'
 
     <!-- Revision Card -->
     <div
-      class="w-[1100px] h-[100px] bg-[#E8473C] border-3 border-[#9B0F0F] text-white rounded-[15px] px-[20px] py-[14px] mb-[40px] flex justify-between items-center"
+      class="w-full h-[100px] bg-[#E8473C] border-3 border-[#9B0F0F] text-white rounded-[15px] px-[20px] py-[14px] mb-[40px] flex justify-between items-center"
     >
       <div class="text-left text-[16px] leading-tight">
         <p>tgl report</p>
@@ -63,7 +63,7 @@ import { RouterLink, RouterView } from 'vue-router'
     </div>
 
     <!-- Button Form -->
-    <div class="w-[1100px] flex justify-end">
+    <div class="w-full flex justify-end">
       <router-link
         to="/form"
         class="bg-[#B0CE88] hover:bg-[#A1C77D] text-black font-semibold text-[16px] px-[24px] py-[8px] rounded-[15px] border-2 border-[#4C763B] transition-all"
