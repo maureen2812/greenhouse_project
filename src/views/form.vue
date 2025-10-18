@@ -30,6 +30,16 @@ function removeFormSection(index) {
   formSections.value.splice(index, 1)
 }
 
+// Fungsi untuk menambah baris material di dalam bagian form tertentu
+function addMaterialRow(sectionIndex) {
+  formSections.value[sectionIndex].materials.push({ materialName: '', qty: '' })
+}
+
+// Fungsi untuk menghapus baris material
+function removeMaterialRow(sectionIndex, materialIndex) {
+  formSections.value[sectionIndex].materials.splice(materialIndex, 1)
+}
+
 // Fungsi untuk menambah baris tenaga kerja
 function addWorkerRow(sectionIndex) {
   formSections.value[sectionIndex].workers.push({ workerName: '', qty: '' })
@@ -80,7 +90,7 @@ function submitForm() {
         <option selected>Lokasi</option>
       </select>
       <select
-        class="w-44 sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none"
+        class="w-full sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none"
       >
         <option>-Batch-</option>
         <option>Batch 1</option>
@@ -121,12 +131,11 @@ function submitForm() {
           v-model="section.coa"
           type="text"
           placeholder="CoA"
-          class="w-44 sm:min-w-xs px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
+          class="w-xs px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
         />
 
         <!-- Material Section -->
         <div class="space-y-2">
-          <!-- Loop untuk setiap baris material -->
           <div
             v-for="(material, matIndex) in section.materials"
             :key="matIndex"
@@ -147,20 +156,27 @@ function submitForm() {
               placeholder="Qty"
               class="w-full sm:w-1/4 px-4 py-2 rounded-lg bg-gray-100 text-gray-700 focus:outline-none"
             />
+            <button
+              @click="removeMaterialRow(index, matIndex)"
+              v-if="section.materials.length > 1"
+              class="text-white hover:text-red-300 transition"
+              title="Hapus Material"
+            >
+              <i class="fa-solid fa-circle-minus text-xl"></i>
+            </button>
           </div>
         </div>
 
-        <!-- Tombol Tambah Bagian Baru -->
+        <!-- Tombol Tambah Material (untuk menambah baris material baru) -->
         <button
-          @click="addFormSection"
-          class="w-44 sm:min-w-xs bg-[#A1C77D] text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition"
+          @click="addMaterialRow(index)"
+          class="min-w-xs bg-white text-gray-700 font-medium px-4 py-2 rounded-lg hover:bg-gray-100 transition"
         >
-          + Tambah Material
+          + Tambah Baris Material
         </button>
 
         <!-- Tenaga Kerja Section -->
         <div class="space-y-2">
-          <!-- Loop untuk setiap baris tenaga kerja -->
           <div
             v-for="(worker, workerIndex) in section.workers"
             :key="workerIndex"
@@ -192,7 +208,7 @@ function submitForm() {
     </div>
 
     <!-- Submit -->
-    <div class="w-full max-w-3xl sm:mt-10 mt-20 flex justify-center">
+    <div class="w-full max-w-3xl flex justify-center mt-8">
       <button
         @click="submitForm"
         class="w-full sm:w-1/2 bg-[#4D734D] hover:bg-[#3C5C3B] text-white font-semibold py-3 rounded-lg border border-[#3A5737] transition-all shadow-sm"
@@ -201,9 +217,10 @@ function submitForm() {
       </button>
     </div>
 
+    <!-- Floating Add Button (untuk menambah kartu hijau baru) -->
     <button
       @click="addFormSection"
-      class="fixed bottom-26 right-6 sm:bottom-20 sm:right-64 bg-[#B5D78D] hover:bg-[#A1C77D] text-black font-bold w-10 h-10 rounded-lg border border-[#4D734D] flex items-center justify-center text-2xl shadow-lg transition"
+      class="fixed bottom-20 right-64 bg-[#B5D78D] hover:bg-[#A1C77D] text-black font-bold w-10 h-10 rounded-full border border-[#4D734D] flex items-center justify-center text-2xl shadow-lg transition"
       title="Tambah Bagian Form"
     >
       +
