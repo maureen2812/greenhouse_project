@@ -1,10 +1,14 @@
 <template>
-  <div class="min-h-screen bg-[#FFFCA9] flex flex-col items-center justify-start py-8 px-4 rounded-2xl">
+  <div
+    class="min-h-screen bg-[#FFFCA9] flex flex-col items-center justify-start py-8 px-4 rounded-2xl"
+  >
     <!-- Header -->
-    <div class="flex w-full max-w-3xl justify-between items-center mb-6">
-      <button class="text-black text-xl hover:text-gray-700 transition" title="Back">
+    <div class="flex w-full">
+      <RouterLink to="/report" class="text-black text-xl hover:text-gray-700 transition" title="Back">
         <i class="fa-solid fa-arrow-left"></i>
-      </button>
+      </RouterLink>
+    </div>
+    <div class="flex w-full  justify-center items-center mb-6">
       <h1 class="text-4xl font-bold text-black">Form</h1>
       <div class="w-6"></div>
     </div>
@@ -34,9 +38,7 @@
     <!-- Form Container (Green Box) -->
     <div class="w-full max-w-3xl bg-[#4D734D] rounded-2xl p-6 space-y-4">
       <!-- Activity -->
-      <select
-        class="w-full rounded-lg bg-white text-gray-700 px-4 py-2 focus:outline-none"
-      >
+      <select class="w-full rounded-lg bg-white text-gray-700 px-4 py-2 focus:outline-none">
         <option selected>Activity</option>
       </select>
 
@@ -49,9 +51,7 @@
 
       <!-- Material + Qty -->
       <div class="flex flex-col sm:flex-row gap-4">
-        <select
-          class="flex-1 rounded-lg bg-white text-gray-700 px-4 py-2 focus:outline-none"
-        >
+        <select class="flex-1 rounded-lg bg-white text-gray-700 px-4 py-2 focus:outline-none">
           <option selected>Material</option>
         </select>
         <input
@@ -83,7 +83,7 @@ import { RouterLink, RouterView } from 'vue-router'
 </script>
 
 <style scoped>
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css');
 
 /* Pastikan font dan spasi halus seperti di gambar */
 select,
