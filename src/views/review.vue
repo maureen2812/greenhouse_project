@@ -1,14 +1,11 @@
 <template>
-  <div class="min-h-screen bg-[#FFFCA9] flex flex-col items-center p-4 sm:p-6 md:p-10">
-    <!-- Header -->
-    <div class="flex w-full max-w-3xl justify-between items-center mb-6">
-      <RouterLink
-        to="viewform"
-        class="text-black text-xl hover:text-gray-700 transition"
-        title="Back"
-      >
+  <div class="min-h-screen bg-[#FFFCA9] flex flex-col items-center p-4 sm:p-6 md:p-10 rounded-2xl">
+    <div class="flex w-full">
+      <RouterLink to="/" class="text-black text-xl hover:text-gray-700 transition" title="Back">
         <i class="fa-solid fa-arrow-left"></i>
       </RouterLink>
+    </div>
+    <div class="flex w-full justify-center items-center mb-6">
       <h1 class="text-3xl sm:text-4xl font-bold text-black">Form</h1>
       <div class="w-6"></div>
     </div>
@@ -30,7 +27,7 @@
       </select>
 
       <select
-        class="w-44 sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#CFE9A8] transition"
+        class="w-full sm:w-1/2 px-4 py-2 border border-black rounded-lg bg-white text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#CFE9A8] transition"
       >
         <option selected>Batch</option>
       </select>
@@ -49,7 +46,7 @@
       <input
         type="text"
         placeholder="CoA"
-        class="w-52 px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
+        class="w-full px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
       />
 
       <!-- Material & Qty -->
