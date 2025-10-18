@@ -1,7 +1,11 @@
 <template>
   <div class="min-h-screen bg-[#FFFCA9] flex flex-col items-center p-4 sm:p-6 md:p-10 rounded-2xl">
     <div class="flex w-full">
-      <RouterLink to="/report" class="text-black text-xl hover:text-gray-700 transition" title="Back">
+      <RouterLink
+        to="/report"
+        class="text-black text-xl hover:text-gray-700 transition"
+        title="Back"
+      >
         <i class="fa-solid fa-arrow-left"></i>
       </RouterLink>
     </div>
