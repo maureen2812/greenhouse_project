@@ -109,7 +109,7 @@ function submitForm() {
     >
       <h2 class="text-lg font-bold text-[#2F5320] mb-4 text-center">Jenis Kerusakan Tanaman</h2>
       <div class="flex flex-col items-center justify-center w-full gap-y-5">
-        <div class="flex items-center gap-x-25 justify-between">
+        <div class="flex items-center justify-between w-60">
           <label class="font-semibold text-[#2F5320]">Kuning</label>
           <input
             type="number"
@@ -117,7 +117,7 @@ function submitForm() {
             class="w-28 bg-gray-100 text-center border border-gray-300 rounded-lg py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#4C763B]"
           />
         </div>
-        <div class="flex items-center gap-x-25 justify-between">
+        <div class="flex items-center justify-between w-60">
           <label class="font-semibold text-[#2F5320]">Kutilang</label>
           <input
             type="number"
@@ -125,7 +125,7 @@ function submitForm() {
             class="w-28 bg-gray-100 text-center border border-gray-300 rounded-lg py-2 text-gray-700 focus:outline-none focus:ring-2 focus:ring-[#4C763B]"
           />
         </div>
-        <div class="flex items-center gap-x-25 justify-between">
+        <div class="flex items-center justify-between w-60">
           <label class="font-semibold text-[#2F5320]">Busuk</label>
           <input
             type="number"
