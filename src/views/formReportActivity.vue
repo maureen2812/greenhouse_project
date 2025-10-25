@@ -184,9 +184,9 @@ function submitForm() {
               class="flex-1 px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
             >
               <option value="" disabled>-Pilih Material-</option>
-              <option>Semen</option>
-              <option>Pasir</option>
-              <option>Besi</option>
+              <option>Pestisida selektif</option>
+              <option>Nutrisi NPK cair</option>
+              <option>Kalium nitrat (KNO₃)</option>
             </select>
 
             <input
@@ -196,16 +196,12 @@ function submitForm() {
               class="w-full sm:w-1/4 px-4 py-2 rounded-lg bg-gray-100 text-gray-700 focus:outline-none"
             />
 
-            <select
-              v-model="material.unit"
-              class="w-full sm:w-1/4 px-4 py-2 rounded-lg bg-white text-gray-700 focus:outline-none"
-            >
-              <option value="" disabled>-Satuan-</option>
-              <option>Liter</option>
-              <option>Mililiter</option>
-              <option>Kilogram</option>
-            </select>
-
+            <input
+              v-model="section.satuan"
+              type="text"
+              placeholder="Satuan"
+              class="w-full sm:w-1/4 px-4 py-2 rounded-lg bg-gray-100 text-gray-700 focus:outline-none"
+            />
             <button
               @click="removeMaterialRow(index, matIndex)"
               v-if="section.materials.length > 1"

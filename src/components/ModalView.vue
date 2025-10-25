@@ -17,7 +17,7 @@ const emit = defineEmits(['close'])
   >
     <!-- Kotak modal -->
     <div
-      class="flex flex-col gap-y-5 bg-[#b9d48f] rounded-lg shadow-lg p-6 max-w-md w-full h-auto max-h-[40vh]"
+      class="flex flex-col gap-y-5 justify-center items-center bg-[#b9d48f] rounded-lg shadow-lg p-6 max-w-lg w-full h-auto max-h-[50vh]"
     >
       <div class="w-full flex justify-end">
         <button @click="$emit('close')" class="w-3 hover:scale-120 transition" title="Close Modal">
@@ -29,9 +29,13 @@ const emit = defineEmits(['close'])
         </button>
       </div>
       <div class="flex gap-x-10">
-        <label class="font-semibold bg-[#FFFD8F] py-2.5 px-5 rounded-lg text-[#2F5320]">
-          Input Total Planlet/Batch V
-        </label>
+        <select class="font-semibold bg-[#FFFD8F] py-2.5 px-4 rounded-lg text-[#2F5320]">
+          <option>Input Total Planlet/Batch</option>
+          <option>Planlet Stek</option>
+          <option>Benih G0</option>
+          <option>Benih G1</option>
+          <option>Buah G2</option>
+        </select>
         <input
           type="number"
           placeholder="Qty"
@@ -51,6 +55,7 @@ const emit = defineEmits(['close'])
       </div>
 
       <button
+      @click="$emit('close')"
         class="bg-[#4D734D] hover:bg-[#3C5C3B] text-white font-semibold py-2.5 px-5 mt-2 rounded-lg border border-[#3A5737] transition-all shadow-sm text-center"
       >
         Submit
