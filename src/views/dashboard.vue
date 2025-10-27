@@ -70,12 +70,14 @@ const summary = ref({
   planletJelek: 400,
   planletDitanam: 1900,
   g0Terjual: 350,
+  g0Diproduksi: 1700,
   g0Dirawat: 1550,
   g1Hidup: 1200,
   g1Mati: 200,
   g2Diproduksi: 950,
   g2Mitra: 500,
   g2Petani: 450,
+  g2Terjual: 800,
   pendapatan: 52500000,
 })
 
@@ -221,7 +223,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FFFD8F] px-6 py-10 text-[#2F5320]">
+  <div class="min-h-screen bg-[#FFFD8F] w-full px-6 py-10 text-[#2F5320]">
     <!-- Header -->
     <div class="w-full flex justify-end mb-4 relative z-50">
       <button
@@ -280,25 +282,42 @@ onMounted(() => {
     </div>
 
     <!-- Statistik -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
-      <button @click="openModal" class="bg-[#4C763B] text-white rounded-xl p-4 text-center">
-        <p class="text-sm">Total Planlet</p>
-        <h2 class="text-2xl font-bold">{{ summary.totalPlanlet }}</h2>
-      </button>
-      <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center">
-        <p class="text-sm">Total G2 Diproduksi</p>
-        <h2 class="text-2xl font-bold">{{ summary.g2Diproduksi }}</h2>
-      </div>
-      <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center">
-        <p class="text-sm">G0 Terjual</p>
-        <h2 class="text-2xl font-bold">{{ summary.g0Terjual }}</h2>
-      </div>
-      <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center">
-        <p class="text-sm">Pendapatan Total</p>
-        <h2 class="text-2xl font-bold">Rp {{ summary.pendapatan.toLocaleString('id-ID') }}</h2>
+    <div class="w-full flex justify-center items-center bg-black">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 w-full max-w-5xl">
+        <button
+          @click="openModal"
+          class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full"
+        >
+          <p class="text-sm">Total Planlet</p>
+          <h2 class="text-2xl font-bold">{{ summary.totalPlanlet }}</h2>
+        </button>
+
+        <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full">
+          <p class="text-sm">G0 Terjual</p>
+          <h2 class="text-2xl font-bold">{{ summary.g0Terjual }}</h2>
+        </div>
+
+        <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full">
+          <p class="text-sm">G0 Diproduksi</p>
+          <h2 class="text-2xl font-bold">{{ summary.g0Diproduksi }}</h2>
+        </div>
+
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+          <p class="text-sm">Total G2 Diproduksi</p>
+          <h2 class="text-2xl font-bold">{{ summary.g2Diproduksi }}</h2>
+        </div>
+
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+          <p class="text-sm">Total G2 Diterjual</p>
+          <h2 class="text-2xl font-bold">{{ summary.g2Terjual }}</h2>
+        </div>
+
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+          <p class="text-sm">Pendapatan Total</p>
+          <h2 class="text-2xl font-bold">Rp {{ summary.pendapatan.toLocaleString('id-ID') }}</h2>
+        </div>
       </div>
     </div>
-
     <!-- Statistik Progres -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
       <div class="bg-white border-l-4 border-[#4C763B] rounded-lg p-4 shadow">
@@ -357,6 +376,9 @@ onMounted(() => {
         </button>
       </div>
     </div>
+    <footer class="bg-[#FFFD8F] text-center py-6 mt-12">
+      <p class="text-[#2F5320] font-semibold text-lg">© GREENHOUSE 2025</p>
+    </footer>
   </div>
   <ModalView :isOpen="isOpen" @close="closeModal" />
 </template>
