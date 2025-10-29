@@ -223,7 +223,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#FFFD8F] px-6 py-10 text-[#2F5320]">
+  <div class="min-h-screen bg-[#FFFD8F] w-full px-6 py-10 text-[#2F5320]">
     <!-- Header -->
     <div class="w-full flex justify-end mb-4 relative z-50">
       <button
@@ -289,33 +289,63 @@ onMounted(() => {
     </div>
 
     <!-- Statistik -->
+<<<<<<< HEAD
     <div class="w-full flex justify-center items-center">
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-10 w-full">
         <button @click="openModal" class="bg-[#4C763B] text-white rounded-xl p-4 text-center">
+=======
+    <div class="w-full flex justify-center items-center bg-black">
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8 w-full max-w-5xl">
+        <button
+          @click="openModal"
+          class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full"
+        >
+>>>>>>> aee4c41ae51947fd215a5c58248c00a27e09efc3
           <p class="text-sm">Total Planlet</p>
           <h2 class="text-2xl font-bold">{{ summary.totalPlanlet }}</h2>
         </button>
 
+<<<<<<< HEAD
         <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center">
+=======
+        <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full">
+>>>>>>> aee4c41ae51947fd215a5c58248c00a27e09efc3
           <p class="text-sm">G0 Terjual</p>
           <h2 class="text-2xl font-bold">{{ summary.g0Terjual }}</h2>
         </div>
 
+<<<<<<< HEAD
         <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center">
           <p class="text-sm">G0 Diproduksi</p>
           <h2 class="text-2xl font-bold">{{ summary.g0Diproduksi }}</h2>
         </div>
         <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center">
+=======
+        <div class="bg-[#4C763B] text-white rounded-xl p-4 text-center w-full">
+          <p class="text-sm">G0 Diproduksi</p>
+          <h2 class="text-2xl font-bold">{{ summary.g0Diproduksi }}</h2>
+        </div>
+
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+>>>>>>> aee4c41ae51947fd215a5c58248c00a27e09efc3
           <p class="text-sm">Total G2 Diproduksi</p>
           <h2 class="text-2xl font-bold">{{ summary.g2Diproduksi }}</h2>
         </div>
 
+<<<<<<< HEAD
         <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center">
+=======
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+>>>>>>> aee4c41ae51947fd215a5c58248c00a27e09efc3
           <p class="text-sm">Total G2 Diterjual</p>
           <h2 class="text-2xl font-bold">{{ summary.g2Terjual }}</h2>
         </div>
 
+<<<<<<< HEAD
         <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center">
+=======
+        <div class="bg-[#CFE9A8] text-[#2F5320] rounded-xl p-4 text-center w-full">
+>>>>>>> aee4c41ae51947fd215a5c58248c00a27e09efc3
           <p class="text-sm">Pendapatan Total</p>
           <h2 class="text-2xl font-bold">Rp {{ summary.pendapatan.toLocaleString('id-ID') }}</h2>
         </div>
