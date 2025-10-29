@@ -74,6 +74,36 @@ const router = createRouter({
       component: () => import('../views/reportProduction.vue'),
       meta: { requiresAuth: true },
     },
+    {
+      path: '/goodmovement',
+      name: 'goodmovement',
+      component: () => import('../views/goodmovement.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/addnew',
+      name: 'addnew',
+      component: () => import('../views/addnew.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/detailmovement',
+      name: 'detailmovement',
+      component: () => import('../views/detailmovement.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/add-location',
+      name: 'addlocation',
+      component: () => import('../views/addlocation.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/location',
+      name: 'location',
+      component: () => import('../views/location.vue'),
+      meta: { requiresAuth: true },
+    },
   ],
 })
 
